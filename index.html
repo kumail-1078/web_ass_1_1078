@@ -3,110 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Q1 (Resume)</title>
+    <title>Job Application</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="inline">
-      <img src="kumail_pic_1.jpeg" alt="Picture" id="img_resume" />
-      <div id="info">
-        <h1 id="text_color">Muhammad Kumail Zaheer</h1>
-        <h2 id="text_color">Data Scientist</h2>
-        <a href="mailto:l201078@lhr.nu.edu.pk" class="font"
-          >📧 l201078@lhr.nu.edu.pk</a
-        >
-        <a href="tel:+923346385977" class="font"> ☎️ +92 334 6385977</a>
-        <span class="font">
-          🏠 House no 1/2, Block B, Jaffria Colony Lahore</span
-        >
-      </div>
-    </div>
-    <div id="body" ;>
-      <div>
-        <h2 id="obj" ;>Objective</h2>
-        <p>
-          Aspiring Data Science graduate with Python and ML skills, seeking
-          entry-level role to apply internship experience in solving practical
-          problems.
-        </p>
-      </div>
-      <hr />
-      <div>
-        <h2>Education</h2>
-        <p class="section">
-          <strong class="education">Bachelor of Science in Data Science</strong
-          ><br />
-          <span class="institute">FAST-NUCES, Lahore</span>
-          <span class="first_date_education">Sep 2020 - Present</span><br />
-          CGPA :
-          <b>3.5</b>
-          <br />
-          Expected Graduation in <b>2024</b>
-        </p>
-        <p>
-          <strong class="education">A-Level</strong><br />
-          <span class="institute">Crescent Model School, Lahore</span>
-          <span class="dates">Sep 2018 - Jun 2020</span>
-        </p>
-
-        <p>
-          <strong class="education">O-Level</strong><br />
-          <span class="institute">Crescent Model School, Lahore</span>
-          <span class="dates">Sep 2015 - Jun 2018</span>
-        </p>
-        <hr />
-      </div>
-
-      <div>
-        <h2>Experience</h2>
-        <p class="section">
-          <strong class="education">Associate AI Engineer</strong><br />
-          <span class="institute">Amentotech Pvt Ltd, Lahore</span>
-          <span class="first_date_work">Jan 2024 - Present</span>
-        </p>
-        <p>
-          <strong class="education">Data Science Internship</strong><br />
-          <span class="institute">Skylinx Technologies, Lahore</span>
-          <span class="date_work">Jun 2023 - Aug 2023</span>
-        </p>
-      </div>
-    </div>
-    <div class="vertical-line"></div>
-    <div id="right_body">
-      <h2>Personal Details</h2>
-      <span
-        ><b>Linkedin</b>
+    <h1>Job Application</h1>
+    <form id="application">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name</label>
+        <input id="fname" type="text" />
+        <label for="lname">Last Name</label>
+        <input id="lname" type="text" />
+        <label for="mail">Email</label>
+        <input type="email" id="mail" />
+        <label for="ph_no">Phone No</label>
+        <input type="tel" id="ph_no" />
+        <label for="a_state">State</label>
+        <input type="text" id="a_state" />
         <br />
-        <a
-          href="https://www.linkedin.com/in/muhammad-kumail-zaheer-a57a78237"
-          id="linkedin_link"
-          target="_blank"
-          >https://www.linkedin.com/in/muhammad-kumail-zaheer-a57a78237</a
+        <br />
+        <label for="a_street">Street</label>
+        <input type="text" id="a_street" class="str_styling" />
+        <label for="a_city">City</label>
+        <input type="text" id="a_city" class="city_styling" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Resume and Cover Letter</legend>
+        <label for="resume" id="inline">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+        <br />
+        <label for="coverLetter">Cover Letter:</label>
+        <br />
+        <textarea
+          id="coverLetter"
+          name="coverLetter"
+          rows="10"
+          cols="150"
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Education</legend>
+        <label> Highest Level of Education </label>
+        <select id="level">
+          <option value="" selected disabled>Select State</option>
+          <option value="High School">High School</option>
+          <option value="Associate Degree">Associate Degree</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+        </select>
+        <br />
+        <br />
+        <label>Name of School/University</label>
+        <input type="text" id="school" />
+        <label>Major/Area of Study</label>
+        <input type="text" id="major" />
+        <label>Graduation Year</label>
+        <input type="number" min="1900" max="2024" id="gradyear" />
+      </fieldset>
+      <fieldset>
+        <legend>Previous Job Title</legend>
+        <label>Company Name</label>
+        <input type="text" />
+        <label>Starting Date</label>
+        <input type="date" />
+        <label>Ending Date</label>
+        <input type="date" />
+        <label>Job Responsibilities</label>
+        <input type="text" />
+      </fieldset>
+      <fieldset>
+        <legend>Skills</legend>
+        <label>Relevant Skills</label>
+        <input type="text" />
+        <label>Certificates</label>
+        <input type="text" />
+      </fieldset>
+      <fieldset>
+        <legend>Availability</legend>
+        <label>Start Date</label>
+        <input type="date" />
+        <label>Preferred Work Schedule</label>
+        <input type="time" />
+        <label>Willingness to Relocate</label>
+        <input type="radio" />Yes <input type="radio" />No
+      </fieldset>
+      <fieldset>
+        <legend>References</legend>
+        <label>Reference Name</label>
+        <input type="text" />
+        <label>Reference Mail</label>
+        <input type="mail" />
+        <label>Relationship to Applicant</label>
+        <input type="text" />
+      </fieldset>
+      <fieldset>
+        <legend>Additional Questions</legend>
+        <label>Why do you want to work for this company ?</label>
+        <br />
+        <textarea rows="5" cols="190"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Consent & Agreement</legend>
+        <input type="checkbox" id="agree" /><label for="agree"
+          >Agreeing to terms & conditions</label
         >
-      </span>
-      <hr />
+        <input type="checkbox" id="privacy" /><label for="privacy"
+          >Privacy Policy Acknowledgement</label
+        >
+      </fieldset>
+      <br />
 
-      <h4>Skills</h4>
-      <ul>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Machine Learning</li>
-        <li>Data Analytics</li>
-        <li>React.js</li>
-      </ul>
-      <hr />
-      <h4>Languages</h4>
-      <ul id="list_circle">
-        <li>English</li>
-        <li>Urdu</li>
-      </ul>
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
 
-      <hr />
-      <h4>Academic Projects</h4>
-      <ul id="list_square">
-        <li>Face Mask Detection</li>
-        <li>Snap N Shop Vision</li>
-      </ul>
+    <button id="b-margin" onclick="viewApplications()">
+      View Applications as Table
+    </button>
+    <br />
+    <br />
+    <div>
+      <table id="app-table">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Resume</th>
+          <th>Cover Letter</th>
+          <th>Education Level</th>
+        </tr>
+      </table>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
